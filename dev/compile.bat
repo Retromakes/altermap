@@ -3,8 +3,8 @@
 
 if [%1]==[help] goto :help
 
-set game=bocaogt
-set cpc_gfx_mode=0
+set game=altermap
+set cpc_gfx_mode=1
 
 if [%1]==[justcompile] goto :compile
 if [%1]==[clean] goto :clean
@@ -22,7 +22,7 @@ cd ..\dev
 if [%1]==[justscripts] goto :compile
 
 echo Convirtiendo mapa
-..\utils\mapcnv.exe ..\map\mapa.map assets\mapa.h 3 12 15 10 15
+..\utils\mapcnv.exe ..\map\mapa.map assets\mapa.h 2 2 15 10 15 packed > nul
 
 echo Convirtiendo enemigos/hotspots
 ..\utils\ene2h.exe ..\enems\enems.ene assets\enems.h

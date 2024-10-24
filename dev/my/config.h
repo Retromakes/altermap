@@ -39,18 +39,18 @@
 
 // In this section we define map dimensions, initial and authomatic ending conditions, etc.
 
-#define MAP_W						3		//
-#define MAP_H						12		// Map dimensions in screens
-#define SCR_INICIO					3		// Initial screen
-#define PLAYER_INI_X				6		//
-#define PLAYER_INI_Y				3		// Initial tile coordinates
-#define SCR_FIN 					34		// Last screen. 99 = deactivated.
+#define MAP_W						2		//
+#define MAP_H						2		// Map dimensions in screens
+#define SCR_INICIO					0		// Initial screen
+#define PLAYER_INI_X				2		//
+#define PLAYER_INI_Y				2		// Initial tile coordinates
+#define SCR_FIN 					99		// Last screen. 99 = deactivated.
 //#define PLAYER_FIN_X				99		//
 //#define PLAYER_FIN_Y				99		// Player tile coordinates to finish game
 //#define PLAYER_NUM_OBJETOS			25		// Objects to get to finish game
-#define PLAYER_LIFE 				10		// Max and starting life gauge.
+#define PLAYER_LIFE 				3		// Max and starting life gauge.
 #define PLAYER_REFILL				1		// Life recharge
-#define PLAYER_DONT_LIMIT_LIFE				// PLAYER_LIFE isn't max.
+//#define PLAYER_DONT_LIMIT_LIFE				// PLAYER_LIFE isn't max.
 //#define COMPRESSED_LEVELS 				// use levels.h instead of mapa.h and enems.h (!)
 //#define PER_LEVEL_SPRITESET 				// use a different spriteset for each level in 48K
 //#define PER_LEVEL_TILESET 				// use a different tileset for each level
@@ -69,25 +69,25 @@
 // Bounding box size
 // -----------------
 											// Comment both for normal 16x16 bounding box
-#define BOUNDING_BOX_8_BOTTOM				// 8x8 aligned to bottom center in 16x16
-//#define BOUNDING_BOX_8_CENTERED			// 8x8 aligned to center in 16x16
+//#define BOUNDING_BOX_8_BOTTOM				// 8x8 aligned to bottom center in 16x16
+#define BOUNDING_BOX_8_CENTERED			// 8x8 aligned to center in 16x16
 //#define BOUNDING_BOX_12X2_CENTERED 		// 8x2 aligned to center in 16x16
-#define SMALL_COLLISION 					// 8x8 centered collision instead of 12x12
+//#define SMALL_COLLISION 					// 8x8 centered collision instead of 12x12
 
 // General directives:
 // -------------------
 
 //#define PLAYER_CHECK_MAP_BOUNDARIES		// If defined, you can't exit the map.
 //#define DIRECT_TO_PLAY					// If defined, title screen is also the game frame.
-#define DEACTIVATE_KEYS 					// If defined, keys are not present.
-#define DEACTIVATE_OBJECTS				// If defined, objects are not present.
-#define DEACTIVATE_REFILLS				// If defined, life refills are not present.
-#define ONLY_ONE_OBJECT					// If defined, only one object can be carried at a time.
-#define OBJECT_COUNT				1		// Defines which FLAG will be used to store the object count.
+//#define DEACTIVATE_KEYS 					// If defined, keys are not present.
+//#define DEACTIVATE_OBJECTS				// If defined, objects are not present.
+//#define DEACTIVATE_REFILLS				// If defined, life refills are not present.
+//#define ONLY_ONE_OBJECT					// If defined, only one object can be carried at a time.
+//#define OBJECT_COUNT				1		// Defines which FLAG will be used to store the object count.
 //#define REVERSE_OBJECTS_COUNT 			// Counts from PLAYER_NUM_OBJETOS to 0
 //#define DEACTIVATE_EVIL_TILE				// If defined, no killing tiles (behaviour 1) are detected.
 //#define CUSTOM_EVIL_TILE_CHECK			// 
-#define PLAYER_BOUNCES						// If defined, collisions make player bounce
+//#define PLAYER_BOUNCES						// If defined, collisions make player bounce
 //#define FULL_BOUNCE 						// If defined, evil tile bounces equal MAX_VX, otherwise v/2
 //#define SLOW_DRAIN						// Works with bounces. Drain is 4 times slower
 #define PLAYER_FLICKERS 					// If defined, collisions make player flicker instead.
@@ -169,10 +169,10 @@
 // ---------
 
 //#define ACTIVATE_SCRIPTING				// Activates msc scripting and flag related stuff.
-#define MAX_FLAGS 					33
+#define MAX_FLAGS 					32
 //#define SCRIPTING_DOWN					// Use DOWN as the action key.
 //#define SCRIPTING_KEY_AUX1				// Use AUX1 as the action key instead.
-//#define SCRIPTING_KEY_FIRE				// User FIRE as the action key instead.
+#define SCRIPTING_KEY_FIRE				// User FIRE as the action key instead.
 //#define SCRIPTING_KEY_NONE 				// No action key. 
 //#define ENABLE_EXTERN_CODE				// Enables custom code to be run from the script using EXTERN n
 //#define ENABLE_FIRE_ZONE					// Allows to define a zone which auto-triggers "FIRE"
@@ -180,9 +180,9 @@
 // Timer
 // -----
 
-#define TIMER_ENABLE						// Enable timer
+//#define TIMER_ENABLE						// Enable timer
 //#define TIMER_INITIAL 			99		// For unscripted games, initial value.
-#define TIMER_REFILL				30		// Timer refill, using tile 21 (hotspot #5)
+//#define TIMER_REFILL				30		// Timer refill, using tile 21 (hotspot #5)
 //#define TIMER_LAPSE				32		// # of frames between decrements
 //#define TIMER_START						// If defined, start timer from the beginning
 //#define TIMER_SCRIPT_0					// If defined, timer = 0 runs "ON_TIMER_OFF" in the script
@@ -203,15 +203,15 @@
 // Top view:
 // ---------
 
-//#define PLAYER_GENITAL				// Enable top view.
+#define PLAYER_GENITAL				// Enable top view.
 //#define TOP_OVER_SIDE 					// UP/DOWN has priority over LEFT/RIGHT
 //#define PLAYER_BOUNCE_WITH_WALLS			// Bounce when hitting a wall. Only really useful in MOGGY_STYLE mode
 
 // Side view:
 // ----------
 
-#define PLAYER_HAS_JUMP 					// If defined, player is able to jump.
-#define BOTH_KEYS_JUMP 						// If jump and no fire, use UP or FIRE to jump (only with keyboard)
+//#define PLAYER_HAS_JUMP 					// If defined, player is able to jump.
+//#define BOTH_KEYS_JUMP 						// If jump and no fire, use UP or FIRE to jump (only with keyboard)
 //#define PLAYER_HAS_JETPAC 				// If defined, player can thrust a vertical jetpac
 //#define PLAYER_BOOTEE 					// Always jumping engine. Don't forget to disable "HAS_JUMP" and "HAS_JETPAC"!!!
 //#define PLAYER_VKEYS 						// Use with VENG_SELECTOR. Advanced.
@@ -317,7 +317,7 @@ extern unsigned char def_keys [0];
 
 //#define USE_AUTO_SHADOWS					// Automatic shadows made of darker attributes
 //#define USE_AUTO_TILE_SHADOWS 			// Automatic shadows using specially defined tiles 32-47.
-#define UNPACKED_MAP						// Full, uncompressed maps. Shadows settings are ignored.
+//#define UNPACKED_MAP						// Full, uncompressed maps. Shadows settings are ignored.
 //#define PACKED_MAP_ALT_TILE 		19		// If defined, in 16 tiles mode, alt tile (default 19)
 
 //#define PLAYER_CUSTOM_ANIMATION 			// Code your own animation in my/custom_animation.h
@@ -329,7 +329,7 @@ extern unsigned char def_keys [0];
 //#define TILANIMS_MOVE_ONE 				// Update one per frame
 #define TILANIMS_MOVE_ALL 					// Update all per frame
 
-//#define PAUSE_ABORT						// Add h=PAUSE, y=ABORT
+#define PAUSE_ABORT						// Add h=PAUSE, y=ABORT
 //#define GET_X_MORE						// Shows "get X more" when getting an object
 
 // ============================================================================
@@ -343,21 +343,21 @@ extern unsigned char def_keys [0];
 
 // IV.1. Vertical movement. Only for side-view.
 
-#define PLAYER_MAX_VY_CAYENDO		512 		// Max falling speed 
-#define PLAYER_G					32		// Gravity acceleration 
+//#define PLAYER_MAX_VY_CAYENDO		512 		// Max falling speed 
+//#define PLAYER_G					32		// Gravity acceleration 
 
-#define PLAYER_VY_INICIAL_SALTO		64 		// Initial junp velocity 
-#define PLAYER_MAX_VY_SALTANDO		372 	// Max jump velocity 
-#define PLAYER_INCR_SALTO			48		// acceleration while JUMP is pressed 
+//#define PLAYER_VY_INICIAL_SALTO		64 		// Initial junp velocity 
+//#define PLAYER_MAX_VY_SALTANDO		372 	// Max jump velocity 
+//#define PLAYER_INCR_SALTO			48		// acceleration while JUMP is pressed 
 
-#define PLAYER_INCR_JETPAC			32		// Vertical jetpac gauge
-#define PLAYER_MAX_VY_JETPAC		256 	// Max vertical jetpac speed
+//#define PLAYER_INCR_JETPAC			32		// Vertical jetpac gauge
+//#define PLAYER_MAX_VY_JETPAC		256 	// Max vertical jetpac speed
 
 // IV.2. Horizontal (side view) or general (top view) movement.
 
-#define PLAYER_MAX_VX				192 	// Max velocity (192/64 = 3 p?xels/frame)
-#define PLAYER_AX					64		// Acceleration (24/64 = 0,375 p?xels/frame^2)
-#define PLAYER_RX					48		// Friction (32/64 = 0,5 p?xels/frame^2)
+#define PLAYER_MAX_VX				128 	// Max velocity (192/64 = 3 p?xels/frame)
+#define PLAYER_AX					32		// Acceleration (24/64 = 0,375 p?xels/frame^2)
+#define PLAYER_RX					32		// Friction (32/64 = 0,5 p?xels/frame^2)
 
 // ============================================================================
 // V. Tile behaviour
@@ -378,8 +378,8 @@ extern unsigned char def_keys [0];
 // Save for 10 (special), but that's obvious, innit?
 #ifndef COMPRESSED_LEVELS
 unsigned char behs [] = {
-	0, 8, 8, 8, 8, 8, 8, 8, 8, 4, 4, 1, 1, 0, 0, 8,
-	0, 0, 0, 0, 0, 0, 0, 8, 0, 8, 0, 0, 0, 8, 0, 0,
-	8, 0, 0, 0, 0, 0, 0, 8, 8, 8, 8, 8, 8, 8, 0, 0,
+	0, 8, 8, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8,
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 };
 #endif
